@@ -1,38 +1,38 @@
-import {ApolloClient, InMemoryCache} from 'apollo-boost'
-import {createHttpLink} from "apollo-link-http";
 import {API_URL} from "../constants";
+import fetch from 'node-fetch'
 import gql from "graphql-tag";
+import {DocumentNode} from "graphql";
 
 export default class UniqueBot {
-    private _token: string
-    private _client: ApolloClient<any>
+    private readonly _token: string
 
     constructor(token: string) {
         this._token = token
-        this._client = new ApolloClient({
-            link: createHttpLink({
-                uri: API_URL,
-                headers: {
-                    Authorization: 'Bearer' + token
-                }
-            }),
-            cache: new InMemoryCache()
-        })
     }
 
-    async updateGuilds(guilds: number) {
-        const data = await this._client.query({
-            query: gql`
-                query ($guilds: Int!) {
-                    botAccount {
-                        guilds(patch: $guilds)
-                    }
+    async _fetch(query: DocumentNode, variables: any) {
+        return fetch(API_URL, {
+            headers: {
+                Authorization: 'Bearer ' + this._token,
+                'Content-Type': 'application/json'
+            },
+            method: 'POST',
+            body: JSON.stringify({
+                query: query.loc!.source.body,
+                variables
+            })
+        }).then(res => res.json()).then(res => res.data)
+    }
+
+    async updateGuilds(guilds: number): Promise<any> {
+        return this._fetch(gql`
+            query ($guilds: Int!) {
+                botAccount {
+                    guilds(patch: $guilds)
                 }
-            `,
-            variables: {
-                guilds
             }
+        `, {
+            guilds
         })
-        return data.data
     }
 }
