@@ -1,4 +1,4 @@
-const { UniqueClient } = require('uniquebots')
+const { UniqueClient } = require('@uniquebots/sdk')
 
 const config = require('../config.json')
 
