@@ -10,7 +10,7 @@ export default class UniqueBot {
         this._token = token
     }
 
-    async _fetch(query: DocumentNode, variables: any) {
+    async _fetch(query: DocumentNode, variables?: any) {
         return fetch(API_URL, {
             headers: {
                 Authorization: 'Bearer ' + this._token,
