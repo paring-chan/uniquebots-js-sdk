@@ -1,5 +1,16 @@
 # Uniquebots JS SDK
 
+### 설치
+
+* npm에 퍼블리시 된 버전은 현재 이용 불가능합니다.
+
+```shell
+# npm
+npm install pikokr/uniquebots-js-sdk
+# yarn
+yarn add pikokr/uniquebots-js-sdk
+```
+
 ### UniqueClient
 
 Typescript
