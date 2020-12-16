@@ -1,1 +1,1 @@
-export const API_URL = 'http://test.pikodev.me:1234/graphql'
+export const API_URL = 'https://api.uniquebots.kr/graphql'
