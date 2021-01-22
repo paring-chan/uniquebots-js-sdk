@@ -1,6 +1,6 @@
 {
   "name": "@uniquebots/sdk",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
   "author": {
@@ -24,6 +24,7 @@
     "install": "tsc"
   },
   "devDependencies": {
-    "discord.js": "^12.5.1"
+    "discord.js": "^12.5.1",
+    "prettier": "^2.2.1"
   }
 }

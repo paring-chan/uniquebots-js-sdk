@@ -1,1 +1,1 @@
-export const API_URL = 'https://api.uniquebots.kr/graphql'
+export const API_URL = "https://uniquebots.kr/graphql"
