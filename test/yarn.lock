@@ -20,17 +20,9 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.12.tgz#0b1d86f8c40141091285dea02e4940df73bba43f"
   integrity sha512-ASH8OPHMNlkdjrEdmoILmzFfsJICvhBsFfAum4aKZ/9U4B6M6tTmTPh+f3ttWdD74CEGV5XvXWkbyfSdXaTd7g==
 
-"@uniquebots/sdk@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@uniquebots/sdk/-/sdk-1.0.1.tgz#74005e0c4324bd1619b1b56eeecb8e71eb333c5b"
-  integrity sha512-AIfmOw4IuQqBY0+lJ7TUcm02/W/ivhY8E8OdYs5nXvwUDwas0U4zijqKvKmyBgeOEd3gh/j7Bai25AchUb/9zw==
-  dependencies:
-    "@types/node-fetch" "^2.5.7"
-    apollo-cache-inmemory "^1.6.6"
-    graphql "^15.4.0"
-    graphql-tag "^2.11.0"
-    node-fetch "^2.6.1"
-    typescript "^4.1.3"
+"@uniquebots/sdk@link:..":
+  version "0.0.0"
+  uid ""
 
 "@wry/context@^0.4.0":
   version "0.4.4"

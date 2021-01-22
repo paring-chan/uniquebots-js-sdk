@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@uniquebots/sdk": "^1.0.1"
-  }
+    "@uniquebots/sdk": "link:.."
+  },
+  "devDependencies": {}
 }
